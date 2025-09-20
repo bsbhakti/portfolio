@@ -19,7 +19,7 @@ import {
 } from "react-icons/si";
 
 export default function Home() {
-  const icons = [1,2,3,4,5];
+  const icons = [1, 2, 3, 4, 5];
 
   const projects = [
     {
@@ -51,17 +51,34 @@ export default function Home() {
     <div>
       <section
         id="hero"
-        className="flex columns-2 items-center justify-center h-screen text-center gap-30"
+        className="flex md:flex-row justify-between h-screen md:px-20 gap-0"
       >
-        <section>
-          <h1 className="text-5xl font-bold">Hi, I’m Bhakti</h1>
-          <p className="text-xl max-w-xl text-gray-600">I exist</p>
-        </section>
-        <div className="relative w-1/4 h-1/2 ">
+        <div className="flex flex-row h-full w-1/2">
+          <section className=" md:w-1/2 m-0 p-0">
+            <h1 className="absolute top-1/2 text-center items-center  text-7xl top-1/2 font-bold p-0">
+              Hi, I’m{" "}
+              <span
+                className="m-0 p-0 text-center"
+                style={{ color: "#605dc8" }}
+              >
+                Bhakti
+              </span>
+            </h1>
+            <p className="text-xl text-center max-w-xl  m-0 p-0">I exist</p>
+          </section>
+          <div className="relative w-1/2 h-3/4">
+            <img
+              src="/img/6.png"
+              className="absolute w-1/5 -translate-x-1/2 -translate-y-1/2 top-3/4 left-3/4"
+            ></img>
+          </div>
+        </div>
+
+        <div className="relative w-1/2 h-3/4 ">
           <img
             src="img/7.png"
             alt="Profile"
-            className=" w-full h-full"
+            className="absolute w-full h-full"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             {icons.map((i) => {
